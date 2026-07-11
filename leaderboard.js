@@ -55,9 +55,15 @@ async function loadLeaderboard(){
 
                 <div class="medal">${medal}</div>
 
-                <div class="avatar">${initial}</div>
+                <<div class="avatar avatar${rank}">
+    ${initial}
+</div>
 
-                <div class="name">${data.name}</div>
+                <<div class="name">
+    ${data.name}
+    <br>
+    <small>Roll No: ${data.roll}</small>
+</div>
 
                 <div class="score">${data.score}</div>
 
