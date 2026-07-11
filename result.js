@@ -29,7 +29,3 @@ else{
 
 document.getElementById("message").innerHTML = msg;
 
-function restartQuiz(){
-    localStorage.clear();
-    window.location.href = "index.html";
-}
