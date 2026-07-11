@@ -19,6 +19,7 @@ let timer;
 const studentInfo = document.getElementById("studentInfo");
 const liveScore = document.getElementById("liveScore");
 const logo = document.getElementById("logo");
+const questionText = document.getElementById("questionText");
 const questionNo = document.getElementById("questionNo");
 const timerText = document.getElementById("timer");
 const optionButtons = document.querySelectorAll(".option");
@@ -46,7 +47,14 @@ function loadQuestion(){
 
     progressBar.style.width = progress + "%";
 
+    questionText.innerHTML = q.question;
+
+if(q.logo && q.logo !== ""){
+    logo.style.display = "block";
     logo.src = q.logo;
+}else{
+    logo.style.display = "none";
+}
 
     let options = [...q.options];
     options.sort(() => Math.random() - 0.5);
@@ -144,7 +152,7 @@ async function nextQuestion(){
     }else{
 
         localStorage.setItem("score", score);
-localStorage.setItem("total", 28);
+localStorage.setItem("total", 40);
 localStorage.setItem("quizCompleted","true");
 
 await saveScore(score);
