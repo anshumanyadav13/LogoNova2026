@@ -13,7 +13,7 @@ questions.sort(() => Math.random() - 0.5);
 
 let currentQuestion = 0;
 let score = 0;
-let timeLeft = 10;
+let timeLeft = 15;
 let timer;
 
 const studentInfo = document.getElementById("studentInfo");
@@ -94,9 +94,9 @@ if(q.logo && q.logo !== ""){
 
     resetButtons();
 
-    timeLeft = 10;
+    timeLeft = 15;
 
-    timerText.innerHTML = "Time Left: 10s";
+    timerText.innerHTML = "Time Left: 15s";
 
     timer = setInterval(function(){
 
