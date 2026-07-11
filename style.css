@@ -440,3 +440,35 @@ background:rgba(255,255,255,.1);
         transform:translateX(0);
     }
 }
+/* Different Avatar Colors */
+
+.avatar1{
+background:#FFD700;
+color:black;
+}
+
+.avatar2{
+background:#C0C0C0;
+color:black;
+}
+
+.avatar3{
+background:#CD7F32;
+color:white;
+}
+
+.avatar4,
+.avatar5,
+.avatar6,
+.avatar7,
+.avatar8,
+.avatar9,
+.avatar10{
+background:#4F46E5;
+color:white;
+}
+
+.name small{
+color:#FFD700;
+font-size:13px;
+}
