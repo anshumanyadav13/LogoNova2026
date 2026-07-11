@@ -20,11 +20,11 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-const tbody = document.querySelector("#leaderboard tbody");
+const leaderboard = document.getElementById("leaderboard");
 
 async function loadLeaderboard(){
 
-    tbody.innerHTML = "";
+    leaderboard.innerHTML = "";
 
     const q = query(
         collection(db,"scores"),
@@ -46,12 +46,33 @@ async function loadLeaderboard(){
         else if(rank==2) medal="🥈";
         else if(rank==3) medal="🥉";
 
-        tbody.innerHTML += `
-        <tr>
-            <td>${medal}</td>
-            <td>${data.name}</td>
-            <td>${data.score}</td>
-        </tr>
+        let initial = data.name.charAt(0).toUpperCase();
+
+        leaderboard.innerHTML += `
+        <div class="leader-card">
+
+            <div class="leader-top">
+
+                <div class="medal">${medal}</div>
+
+                <div class="avatar">${initial}</div>
+
+                <div class="name">${data.name}</div>
+
+                <div class="score">${data.score}</div>
+
+            </div>
+
+            <div class="bar-bg">
+
+                <div class="bar-fill"
+                     style="width:${(data.score/40)*100}%">
+
+                </div>
+
+            </div>
+
+        </div>
         `;
 
         rank++;
@@ -60,5 +81,6 @@ async function loadLeaderboard(){
 
 }
 
-setInterval(loadLeaderboard, 3000);
 loadLeaderboard();
+
+setInterval(loadLeaderboard,3000);
