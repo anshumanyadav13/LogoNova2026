@@ -2,107 +2,162 @@ const questions = [
 
 {
 logo:"images/google.png",
-options:["Google","Microsoft","Yahoo","Amazon"],
+question:"Identify this logo.",
+options:["Google","Yahoo","Bing","DuckDuckGo"],
 answer:"Google",
-points:1
+points:2
+},
+
+{
+logo:"",
+question:"Which company owns WhatsApp?",
+options:["Meta","Google","Microsoft","Apple"],
+answer:"Meta",
+points:2
 },
 
 {
 logo:"images/microsoft.png",
-options:["Microsoft","Intel","Google","Oracle"],
+question:"Identify this logo.",
+options:["Microsoft","Intel","Dell","HP"],
 answer:"Microsoft",
-points:1
+points:2
 },
 
 {
-logo:"images/apple.png",
-options:["Samsung","Apple","Sony","Dell"],
-answer:"Apple",
-points:1
+logo:"",
+question:"Which app is mainly used for video meetings?",
+options:["Zoom","Spotify","Instagram","Telegram"],
+answer:"Zoom",
+points:2
 },
 
 {
 logo:"images/amazon.png",
-options:["Flipkart","Amazon","Meesho","eBay"],
+question:"Identify this logo.",
+options:["Amazon","Flipkart","Myntra","eBay"],
 answer:"Amazon",
-points:1
-},
-
-{
-logo:"images/youtube.png",
-options:["Netflix","Prime Video","YouTube","Spotify"],
-answer:"YouTube",
-points:1
-},
-
-{
-logo:"images/whatsapp.png",
-options:["Telegram","Signal","WhatsApp","Discord"],
-answer:"WhatsApp",
-points:1
-},
-
-{
-logo:"images/instagram.png",
-options:["Facebook","Instagram","Threads","Snapchat"],
-answer:"Instagram",
 points:2
 },
 
 {
-logo:"images/github.png",
-options:["GitLab","GitHub","Bitbucket","Docker"],
-answer:"GitHub",
+logo:"",
+question:"Which company developed the Android operating system?",
+options:["Google","Apple","Microsoft","Samsung"],
+answer:"Google",
 points:2
 },
 
 {
-logo:"images/oracle.png",
-options:["Oracle","IBM","SAP","Cisco"],
-answer:"Oracle",
+logo:"images/netflix.png",
+question:"Identify this logo.",
+options:["Netflix","Prime Video","Disney+","JioHotstar"],
+answer:"Netflix",
+points:2
+},
+
+{
+logo:"",
+question:"Which app is mainly used for professional networking?",
+options:["LinkedIn","Instagram","Snapchat","Pinterest"],
+answer:"LinkedIn",
+points:2
+},
+
+{
+logo:"images/spotify.png",
+question:"Identify this logo.",
+options:["Spotify","Gaana","JioSaavn","Apple Music"],
+answer:"Spotify",
+points:2
+},
+
+{
+logo:"",
+question:"Which company developed Windows?",
+options:["Microsoft","Google","Apple","IBM"],
+answer:"Microsoft",
 points:2
 },
 
 {
 logo:"images/adobe.png",
-options:["Adobe","Canva","CorelDRAW","Photoshop"],
+question:"Identify this logo.",
+options:["Adobe","Autodesk","Corel","Oracle"],
 answer:"Adobe",
 points:2
 },
 
 {
-logo:"images/nvidia.png",
-options:["AMD","Intel","NVIDIA","Qualcomm"],
-answer:"NVIDIA",
+logo:"",
+question:"Which app is mainly used for cloud storage?",
+options:["Google Drive","YouTube","Netflix","Chrome"],
+answer:"Google Drive",
 points:2
 },
 
 {
-logo:"images/openai.png",
-options:["OpenAI","DeepMind","Anthropic","Meta AI"],
-answer:"OpenAI",
-points:3
+logo:"images/discord.png",
+question:"Identify this logo.",
+options:["Discord","Slack","Skype","Teams"],
+answer:"Discord",
+points:2
 },
 
 {
-logo:"images/docker.png",
-options:["Docker","Kubernetes","GitHub","Linux"],
-answer:"Docker",
-points:3
+logo:"",
+question:"Which company owns Instagram?",
+options:["Meta","Google","Apple","Microsoft"],
+answer:"Meta",
+points:2
 },
 
 {
 logo:"images/linux.png",
-options:["Linux","Windows","macOS","Ubuntu"],
+question:"Identify this logo.",
+options:["Linux","Windows","Android","Ubuntu"],
 answer:"Linux",
-points:3
+points:2
 },
 
 {
-logo:"images/amd.png",
-options:["AMD","Intel","NVIDIA","ASUS"],
-answer:"AMD",
-points:3
+logo:"",
+question:"Which app is mainly used for team communication?",
+options:["Slack","Netflix","Facebook","YouTube"],
+answer:"Slack",
+points:2
+},
+
+{
+logo:"images/firefox.png",
+question:"Identify this logo.",
+options:["Firefox","Chrome","Edge","Opera"],
+answer:"Firefox",
+points:2
+},
+
+{
+logo:"",
+question:"Which company developed the Chrome browser?",
+options:["Google","Microsoft","Mozilla","Apple"],
+answer:"Google",
+points:2
+},
+
+{
+logo:"images/dropbox.png",
+question:"Identify this logo.",
+options:["Dropbox","OneDrive","Google Drive","iCloud"],
+answer:"Dropbox",
+points:2
+},
+
+{
+logo:"",
+question:"Which app is primarily used for source code hosting?",
+options:["GitHub","Instagram","Netflix","Spotify"],
+answer:"GitHub",
+points:2
 }
 
 ];
