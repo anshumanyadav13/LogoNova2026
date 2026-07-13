@@ -22,9 +22,6 @@ const db = getFirestore(app);
 
 const leaderboard = document.getElementById("leaderboard");
 
-const totalPlayers = document.getElementById("totalPlayers");
-const highestScore = document.getElementById("highestScore");
-
 async function loadLeaderboard(){
 
     leaderboard.innerHTML = "";
@@ -37,18 +34,9 @@ async function loadLeaderboard(){
 
     const snapshot = await getDocs(q);
 
-totalPlayers.innerHTML = snapshot.size;
-
-let highest = 0;
-
     let rank = 1;
 
     snapshot.forEach((doc)=>{
-
-if(data.score > highest){
-    highest = data.score;
-}
-highestScore.innerHTML = highest;
 
         const data = doc.data();
 
@@ -60,33 +48,30 @@ highestScore.innerHTML = highest;
 
         let initial = data.name.charAt(0).toUpperCase();
 
+        let percent = (data.score/40)*100;
+
         leaderboard.innerHTML += `
         <div class="leader-card">
 
             <div class="leader-top">
 
-                <div class="medal">${medal}</div>
+                <span class="medal">${medal}</span>
 
-                <<div class="avatar avatar${rank}">
-    ${initial}
-</div>
+                <div class="avatar">${initial}</div>
 
-                <<div class="name">
-    ${data.name}
-    <br>
-    <small>Roll No: ${data.roll}</small>
-</div>
+                <div class="info">
 
-                <div class="score">${data.score}</div>
+                    <h3>${data.name}</h3>
+
+                    <p>Score : ${data.score}</p>
+
+                </div>
 
             </div>
 
-            <div class="bar-bg">
+            <div class="bar">
 
-                <div class="bar-fill"
-                     style="width:${(data.score/40)*100}%">
-
-                </div>
+                <div class="fill" style="width:${percent}%"></div>
 
             </div>
 
