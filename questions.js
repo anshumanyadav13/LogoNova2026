@@ -1,10 +1,10 @@
 const questions = [
 
 {
-logo:"images/google.png",
+logo:"images/docker.png",
 question:"Identify this logo.",
-options:["Google","Yahoo","Bing","DuckDuckGo"],
-answer:"Google",
+options:["Docker","Kubernetes","GitHub","Git"],
+answer:"Docker",
 points:2
 },
 
