@@ -48,35 +48,37 @@ async function loadLeaderboard(){
 
         let initial = data.name.charAt(0).toUpperCase();
 
-        let percent = (data.score/40)*100;
+        let percent = (data.score / 40) * 100;
 
-        leaderboard.innerHTML += `
-        <div class="leader-card">
+leaderboard.innerHTML += `
+<div class="leader-card">
 
-            <div class="leader-top">
+    <div class="leader-top">
 
-                <span class="medal">${medal}</span>
+        <span class="medal">${medal}</span>
 
-                <div class="avatar">${initial}</div>
+        <div class="avatar avatar${rank}">
+            ${initial}
+        </div>
 
-                <div class="info">
+        <div class="info">
 
-                    <h3>${data.name}</h3>
+            <h3>${data.name}</h3>
 
-                    <p>Score : ${data.score}</p>
-
-                </div>
-
-            </div>
-
-            <div class="bar">
-
-                <div class="fill" style="width:${percent}%"></div>
-
-            </div>
+            <small>⭐ ${data.score} Points</small>
 
         </div>
-        `;
+
+    </div>
+
+    <div class="bar">
+
+        <div class="fill" style="width:${percent}%"></div>
+
+    </div>
+
+</div>
+`;
 
         rank++;
 
