@@ -129,8 +129,6 @@ function resetButtons(){
 
         btn.disabled=false;
 
-        btn.style.background="#4f46e5";
-
     });
 
 }
