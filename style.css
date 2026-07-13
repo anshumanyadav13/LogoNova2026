@@ -553,3 +553,18 @@ li{
     margin-top:4px;
     font-size:16px;
 }
+.leader-card:hover{
+    transform:scale(1.03);
+    transition:.3s;
+}
+.avatar1{
+background:linear-gradient(135deg,#FFD700,#FFF176);
+}
+
+.avatar2{
+background:linear-gradient(135deg,#C0C0C0,#E5E5E5);
+}
+
+.avatar3{
+background:linear-gradient(135deg,#CD7F32,#F4A460);
+}
