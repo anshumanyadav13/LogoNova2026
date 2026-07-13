@@ -65,10 +65,10 @@ points:2
 },
 
 {
-logo:"images/spotify.png",
+logo:"images/github.png",
 question:"Identify this logo.",
-options:["Spotify","Gaana","JioSaavn","Apple Music"],
-answer:"Spotify",
+options:["GitHub","GitLab","Bitbucket","SourceForge"],
+answer:"GitHub",
 points:2
 },
 
