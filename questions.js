@@ -49,10 +49,10 @@ points:2
 },
 
 {
-logo:"images/netflix.png",
+logo:"images/perplexity.png",
 question:"Identify this logo.",
-options:["Netflix","Prime Video","Disney+","JioHotstar"],
-answer:"Netflix",
+options:["Perplexity","ChatGPT","Gemini","Claude"],
+answer:"Perplexity",
 points:2
 },
 
