@@ -85,7 +85,12 @@ leaderboard.innerHTML += `
     });
 
 }
+const q = query(
+    collection(db, "scores"),
+    orderBy("score", "desc"),
+    limit(10)
+);
 
-loadLeaderboard();
-
-setInterval(loadLeaderboard,3000);
+onSnapshot(q, () => {
+    loadLeaderboard();
+});
