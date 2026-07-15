@@ -27,10 +27,11 @@ async function loadLeaderboard(){
     leaderboard.innerHTML = "";
 
     const q = query(
-        collection(db,"scores"),
-        orderBy("score","desc"),
-        limit(10)
-    );
+    collection(db, "scores"),
+    orderBy("score", "desc"),
+    orderBy("time", "asc"),
+    limit(10)
+);
 
     const snapshot = await getDocs(q);
 
