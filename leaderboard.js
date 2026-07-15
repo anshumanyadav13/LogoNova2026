@@ -25,7 +25,7 @@ const leaderboard = document.getElementById("leaderboard");
  const q = query(
     collection(db, "scores"),
     orderBy("score", "desc"),
-    
+    orderBy("time", "asc")
 );
 
 onSnapshot(q, (snapshot) => {
