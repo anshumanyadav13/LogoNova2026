@@ -39,7 +39,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 window.startQuiz = async function(){
-
+alert("New script loaded");
     let name = document.getElementById("name").value.trim();
     let roll = document.getElementById("roll").value.trim();
 
