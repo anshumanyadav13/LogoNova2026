@@ -4,7 +4,6 @@ import {
     collection,
     query,
     orderBy,
-    limit,
     onSnapshot
 } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
 
@@ -31,17 +30,14 @@ onSnapshot(q, (snapshot) => {
 
     leaderboard.innerHTML = "";
 
-    if (snapshot.size < 10) {
-        leaderboard.innerHTML = `
-            <h2 style="color:#FFD700;text-align:center;">
-                🏅 Waiting for participants...
-            </h2>
-            <p style="color:white;text-align:center;">
-                ${10 - snapshot.size} more participant(s) needed to display the leaderboard.
-            </p>
-        `;
-        return;
-    }
+if (snapshot.empty) {
+    leaderboard.innerHTML = `
+        <h2 style="color:white;text-align:center;">
+            Waiting for the first participant...
+        </h2>
+    `;
+    return;
+}
 
     let rank = 1;
 
