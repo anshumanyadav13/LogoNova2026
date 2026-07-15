@@ -92,14 +92,39 @@ select:focus{
 }
 
 button{
-background:linear-gradient(90deg,#616161,#9e9e9e);
-color:white;
+    width:100%;
+    padding:18px;
+    margin-top:20px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:1px;
+
+    color:white;
+
+    background:linear-gradient(135deg,#1565C0,#42A5F5);
+
+    box-shadow:
+    0 8px 20px rgba(33,150,243,.45),
+    inset 0 1px 1px rgba(255,255,255,.3);
+
+    transition:.3s;
 }
 
 button:hover{
-    transform: scale(1.03);
+    transform:translateY(-4px) scale(1.03);
+
+    box-shadow:
+    0 12px 28px rgba(33,150,243,.6),
+    inset 0 1px 1px rgba(255,255,255,.3);
 }
 
+button:active{
+    transform:scale(.97);
+}
 .option{
     margin:8px 0;
 }
