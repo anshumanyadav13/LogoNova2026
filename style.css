@@ -7,14 +7,16 @@
 
 body{
     min-height:100vh;
+    margin:0;
     display:flex;
     justify-content:center;
     align-items:center;
     padding:20px;
-    overflow-y:auto;
     overflow-x:hidden;
+    overflow-y:auto;
 
-    background:radial-gradient(circle at top,#3d3d3d,#1b1b1b 45%,#0f0f0f 100%);
+    background:
+    radial-gradient(circle at top,#4b5563,#1f2937 45%,#111827 100%);
 }
 .container{
     width:100%;
@@ -24,23 +26,20 @@ body{
 }
 
 .card{
-    width:100%;
-    max-width:700px;
-    margin:20px auto;
-    background:rgba(45,45,45,.95);
-    border:2px solid #6c757d;
-    border-radius:25px;
-    padding:40px;
-    box-shadow:0 0 25px rgba(0,0,0,.6);
+    background:rgba(31,41,55,.95);
+    border:1px solid #6b7280;
+    border-radius:24px;
+    padding:35px;
+    margin-top:25px;
+    box-shadow:0 10px 35px rgba(0,0,0,.45);
 }
 
 h1{
-    font-size:48px;
-    font-weight:800;
-    color:white;
+    color:#ffffff;
+    font-size:42px;
+    font-weight:700;
     letter-spacing:2px;
     margin:15px 0;
-    text-transform:uppercase;
 }
 
 h2{
@@ -49,13 +48,14 @@ margin-bottom:20px;
 }
 
 h3{
-color:#b0bec5;
+    color:#60a5fa;
+    font-weight:600;
 }
 
 .subtitle{
-    color:white;
-    margin-bottom:15px;
+    color:#d1d5db;
     font-size:18px;
+    line-height:1.6;
 }
 
 .footer{
@@ -95,33 +95,21 @@ select:focus{
 
 button{
     width:100%;
-    padding:18px;
-    margin-top:20px;
+    padding:16px;
+    margin-top:15px;
     border:none;
-    border-radius:50px;
-    cursor:pointer;
-
-    font-size:20px;
-    font-weight:700;
-    letter-spacing:1px;
-
+    border-radius:14px;
+    background:linear-gradient(135deg,#2563eb,#3b82f6);
     color:white;
-
-    background:linear-gradient(135deg,#1565C0,#42A5F5);
-
-    box-shadow:
-    0 8px 20px rgba(33,150,243,.45),
-    inset 0 1px 1px rgba(255,255,255,.3);
-
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
     transition:.3s;
 }
 
 button:hover{
-    transform:translateY(-4px) scale(1.03);
-
-    box-shadow:
-    0 12px 28px rgba(33,150,243,.6),
-    inset 0 1px 1px rgba(255,255,255,.3);
+    transform:translateY(-2px);
+    box-shadow:0 8px 20px rgba(37,99,235,.35);
 }
 
 button:active{
@@ -581,8 +569,13 @@ h3{
 }
 
 input{
-    font-size:20px;
-    padding:18px;
+    width:100%;
+    padding:15px;
+    margin:12px 0;
+    border:1px solid #4b5563;
+    border-radius:12px;
+    background:#f9fafb;
+    font-size:16px;
 }
 
 button{
