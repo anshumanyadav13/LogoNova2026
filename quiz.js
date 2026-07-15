@@ -37,8 +37,6 @@ function loadQuestion(){
 
     let q = questions[currentQuestion];
 
-    liveScore.innerHTML = "⭐ Score: " + score;
-
     questionNo.innerHTML =
     "Question " + (currentQuestion + 1) + " of " + questions.length;
 
