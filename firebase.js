@@ -6,7 +6,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
+  apiKey: "AIzaSyAn2zYgbD3LqawWMGVmGLWEwRs4ZNu-iiI",
   authDomain: "skillquestrj2026.firebaseapp.com",
   projectId: "skillquestrj2026",
   storageBucket: "skillquestrj2026.firebasestorage.app",
