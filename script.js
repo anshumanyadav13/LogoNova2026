@@ -39,15 +39,10 @@ if (!/^\d{4}$/.test(roll)) {
         return;
     }
 
-    if(roll==""){
-        alert("Please enter your Roll Number.");
-        return;
-    }
-
-    if(!/^[0-9]+$/.test(roll)){
-        alert("Roll Number should contain only numbers.");
-        return;
-    }
+    if (roll.length !== 4 || isNaN(roll)) {
+    alert("Roll Number must contain exactly 4 digits.");
+    return;
+}
 
     const studentRef = doc(db, "scores", roll);
     const studentDoc = await getDoc(studentRef);
