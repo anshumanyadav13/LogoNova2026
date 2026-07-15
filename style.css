@@ -500,6 +500,11 @@ li{
     margin-top:4px;
     font-size:16px;
 }
+.info small{
+    color:#FFD700;
+    font-size:15px;
+    font-weight:600;
+}
 .leader-card:hover{
     transform:scale(1.03);
     transition:.3s;
