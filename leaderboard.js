@@ -22,12 +22,10 @@ const db = getFirestore(app);
 
 const leaderboard = document.getElementById("leaderboard");
 
-
-const q = query(
+ const q = query(
     collection(db, "scores"),
     orderBy("score", "desc"),
-    orderBy("time", "asc"),
-    limit(10)
+    orderBy("time", "asc")
 );
 
 onSnapshot(q, (snapshot) => {
