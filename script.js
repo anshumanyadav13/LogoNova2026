@@ -38,32 +38,31 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-window.startQuiz = async function(){
-alert("New script loaded");
-    let name = document.getElementById("name").value.trim();
-    let roll = document.getElementById("roll").value.trim();
+window.startQuiz = async function () {
 
-if (!/^\d{4}$/.test(roll)) {
-    alert("Please enter a valid 4-digit Roll Number.");
-    return;
-}
-    let cls = document.getElementById("class").value;
+    const name = document.getElementById("name").value.trim();
+    const roll = document.getElementById("roll").value.trim();
+    const cls = document.getElementById("class").value;
 
-    if(name==""){
+    if (name === "") {
         alert("Please enter your name.");
         return;
     }
 
-    if(!/^[A-Za-z ]+$/.test(name)){
+    if (!/^[A-Za-z ]+$/.test(name)) {
         alert("Name should contain only letters.");
         return;
     }
 
+    if (!/^\d{4}$/.test(roll)) {
+        alert("Roll Number must be exactly 4 digits.");
+        return;
+    }
 
     const studentRef = doc(db, "scores", roll);
     const studentDoc = await getDoc(studentRef);
 
-    if(studentDoc.exists()){
+    if (studentDoc.exists()) {
         alert("❌ This Roll Number has already attempted the quiz.");
         return;
     }
@@ -73,5 +72,4 @@ if (!/^\d{4}$/.test(roll)) {
     localStorage.setItem("class", cls);
 
     window.location.href = "rules.html";
-
-}
+};
