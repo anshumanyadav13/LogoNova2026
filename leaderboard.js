@@ -24,12 +24,16 @@ const leaderboard = document.getElementById("leaderboard");
 
  const q = query(
     collection(db, "scores"),
-    orderBy("score", "desc"),
-    orderBy("time", "asc")
+    
 );
 
 onSnapshot(q, (snapshot) => {
 
+console.log("Documents:", snapshot.size);
+
+snapshot.forEach((doc) => {
+    console.log(doc.data());
+});
     leaderboard.innerHTML = "";
 
     let rank = 1;
