@@ -9,20 +9,18 @@ body{
     min-height:100vh;
     display:flex;
     justify-content:center;
-    align-items:flex-start;
+    align-items:center;
     padding:20px;
     overflow-y:auto;
     overflow-x:hidden;
 
-    background:
-    radial-gradient(circle at top,#3d3d3d,#1b1b1b 45%,#0f0f0f 100%);
+    background:radial-gradient(circle at top,#3d3d3d,#1b1b1b 45%,#0f0f0f 100%);
 }
 .container{
     width:100%;
-    max-width:450px;
+    max-width:650px;
+    margin:40px auto;
     text-align:center;
-    animation:float 5s ease-in-out infinite;
-    margin:20px auto;
 }
 
 .card{
@@ -553,4 +551,31 @@ background:linear-gradient(135deg,#CD7F32,#F4A460);
 
 .fill{
     transition: width 1s ease;
+}
+
+@media (min-width: 992px){
+
+.container{
+    max-width:700px;
+}
+
+.card{
+    padding:50px;
+}
+
+h1{
+    font-size:60px;
+}
+
+.subtitle{
+    font-size:24px;
+}
+
+button{
+    font-size:22px;
+}
+
+input{
+    font-size:20px;
+}
 }
