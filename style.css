@@ -194,6 +194,34 @@ font-size:16px;
 .bg i:nth-child(11){bottom:15%;left:35%;}
 .bg i:nth-child(12){top:50%;right:5%;}
 
+@keyframes floatIcon{
+
+0%{
+    transform:translateY(0) rotate(0deg);
+    opacity:.08;
+}
+
+25%{
+    transform:translate(-20px,-15px) rotate(90deg);
+    opacity:.15;
+}
+
+50%{
+    transform:translate(20px,-35px) rotate(180deg);
+    opacity:.22;
+}
+
+75%{
+    transform:translate(-15px,15px) rotate(270deg);
+    opacity:.15;
+}
+
+100%{
+    transform:translateY(0) rotate(360deg);
+    opacity:.08;
+}
+
+}
 #score{
 
 font-size:55px;
