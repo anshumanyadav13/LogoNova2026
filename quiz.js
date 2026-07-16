@@ -141,26 +141,22 @@ async function nextQuestion(){
 
     }else{
 
-        localStorage.setItem("score", score);
-localStorage.setItem("total", 20);
 localStorage.setItem("quizCompleted","true");
 
 await saveScore(score);
 
         document.body.innerHTML=`
-        <div class="container">
-            <div class="card">
-                <h1>🎉 Quiz Completed!</h1>
-                <h2>Calculating your score...</h2>
-            </div>
-        </div>
-        `;
+<div class="container">
+    <div class="card">
+        <h1>🎉 Quiz Submitted Successfully!</h1>
+        <h2>Redirecting to Leaderboard...</h2>
+    </div>
+</div>
+`;
 
-        setTimeout(function(){
-
-            window.location.href="leaderboard.html";
-
-        },2000);
+setTimeout(function(){
+    window.location.href="leaderboard.html";
+},2000);
 
     }
 
