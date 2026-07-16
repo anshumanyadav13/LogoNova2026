@@ -167,3 +167,5 @@ await saveScore(score);
 }
 
 loadQuestion();
+
+localStorage.setItem("quizCompleted","true");
