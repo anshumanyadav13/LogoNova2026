@@ -668,3 +668,10 @@ button{
 }
 
 }
+
+.score-title{
+    color:#FFD700;
+    font-size:30px;
+    font-weight:700;
+    text-shadow:0 0 10px rgba(255,215,0,.6);
+}
