@@ -80,20 +80,15 @@ function loadQuestion(){
 
         optionButtons[i].onclick = function(){
 
-            this.blur();
+    if(this.innerHTML === q.answer){
+        score += q.points;
+    }
 
-            this.classList.add("selected");
-this.style.boxShadow = "0 0 20px rgba(34,197,94,.6)";
+    disableButtons();
 
-            if(this.innerHTML === q.answer){
-                score += q.points;
-            }
+    setTimeout(nextQuestion,800);
 
-            disableButtons();
-
-            setTimeout(nextQuestion,800);
-
-        };
+};
 
     }
 
@@ -134,12 +129,10 @@ function resetButtons(){
     optionButtons.forEach(btn=>{
 
         btn.disabled = false;
-        btn.blur();
 
-        btn.style.background = "";
-        btn.style.color = "";
-        btn.style.border = "";
-        btn.style.boxShadow = "";
+        btn.classList.remove("selected");
+
+        btn.blur();
 
     });
 
