@@ -50,7 +50,7 @@ window.startQuiz = async function () {
     const studentDoc = await getDoc(studentRef);
 
     if (studentDoc.exists()) {
-        alert("❌ This Roll Number has already attempted the quiz.");
+        alert("❌ You have already completed the quiz. Only one attempt is allowed per device.");
         return;
     }
 } catch (error) {
