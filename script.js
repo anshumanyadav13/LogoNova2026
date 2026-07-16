@@ -19,7 +19,6 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 window.startQuiz = async function () {
-window.startQuiz = async function () {
 
     if (localStorage.getItem("quizCompleted") === "true") {
         alert("❌ This device has already attempted the quiz.");
