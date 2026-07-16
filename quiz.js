@@ -34,6 +34,13 @@ let studentRoll = localStorage.getItem("roll");
 studentInfo.innerHTML =
 "👤 " + studentName + " | 🎓 Roll No: " + studentRoll;
 
+questions.forEach(q => {
+    if (q.logo) {
+        const img = new Image();
+        img.src = q.logo;
+    }
+});
+
 function loadQuestion(){
 
     clearInterval(timer);
