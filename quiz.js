@@ -83,7 +83,8 @@ function loadQuestion(){
             this.blur();
 
             this.style.background = "#22c55e";
-            this.style.color = "#fff";
+this.style.color = "#fff";
+this.style.boxShadow = "0 0 20px rgba(34,197,94,.6)";
 
             if(this.innerHTML === q.answer){
                 score += q.points;
@@ -134,10 +135,12 @@ function resetButtons(){
     optionButtons.forEach(btn=>{
 
         btn.disabled = false;
+        btn.blur();
+
         btn.style.background = "";
         btn.style.color = "";
         btn.style.border = "";
-        btn.blur();
+        btn.style.boxShadow = "";
 
     });
 
