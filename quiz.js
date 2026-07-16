@@ -26,7 +26,7 @@ const logo = document.getElementById("logo");
 const questionText = document.getElementById("questionText");
 const questionNo = document.getElementById("questionNo");
 const timerText = document.getElementById("timer");
-const optionButtons = document.querySelectorAll(".option");
+const optionsDiv = document.getElementById("options");
 const progressBar = document.getElementById("progressBar");
 
 const studentName = localStorage.getItem("name");
@@ -74,23 +74,33 @@ function loadQuestion(){
     let options = [...q.options];
     options.sort(() => Math.random() - 0.5);
 
-    for(let i=0;i<4;i++){
+    optionsDiv.innerHTML = "";
 
-        optionButtons[i].innerHTML = options[i];
+let options = [...q.options];
+options.sort(() => Math.random() - 0.5);
 
-        optionButtons[i].onclick = function(){
+options.forEach(option => {
 
-    if(this.innerHTML === q.answer){
-        score += q.points;
-    }
+    const btn = document.createElement("button");
 
-    disableButtons();
+    btn.className = "option";
+    btn.innerHTML = option;
 
-    setTimeout(nextQuestion,800);
+    btn.onclick = function(){
 
-};
+        if(option === q.answer){
+            score += q.points;
+        }
 
-    }
+        optionsDiv.querySelectorAll(".option").forEach(b => b.disabled = true);
+
+        setTimeout(nextQuestion, 800);
+
+    };
+
+    optionsDiv.appendChild(btn);
+
+});
 
     timeLeft = 15;
     timerText.innerHTML = "Time Left: 15s";
