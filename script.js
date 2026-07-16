@@ -42,4 +42,37 @@ window.startQuiz = async function () {
         return;
     }
 
-   
+    if (!/^\d{4}$/.test(roll)) {
+        alert("Roll Number must be exactly 4 digits.");
+        btn.disabled = false;
+        btn.innerHTML = "🚀 START QUIZ NOW";
+        return;
+    }
+
+    try {
+
+        const studentRef = doc(db, "scores", roll);
+        const studentDoc = await getDoc(studentRef);
+
+        if (studentDoc.exists()) {
+            alert("❌ This Roll Number has already attempted the quiz.");
+            btn.disabled = false;
+            btn.innerHTML = "🚀 START QUIZ NOW";
+            return;
+        }
+
+        localStorage.setItem("name", name);
+        localStorage.setItem("roll", roll);
+        localStorage.setItem("class", cls);
+
+        window.location.href = "rules.html";
+
+    } catch (error) {
+
+        alert("Error: " + error.message);
+        btn.disabled = false;
+        btn.innerHTML = "🚀 START QUIZ NOW";
+
+    }
+
+};
