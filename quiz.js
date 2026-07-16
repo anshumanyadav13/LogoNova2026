@@ -82,8 +82,7 @@ function loadQuestion(){
 
             this.blur();
 
-            this.style.background = "#22c55e";
-this.style.color = "#fff";
+            this.classList.add("selected");
 this.style.boxShadow = "0 0 20px rgba(34,197,94,.6)";
 
             if(this.innerHTML === q.answer){
