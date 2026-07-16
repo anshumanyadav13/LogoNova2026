@@ -158,7 +158,7 @@ await saveScore(score);
 
         setTimeout(function(){
 
-            window.location.href="result.html";
+            window.location.href="leaderboard.html";
 
         },2000);
 
