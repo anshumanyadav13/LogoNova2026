@@ -62,9 +62,10 @@ if (snapshot.empty) {
         </div>
 
         <div class="info">
-            <h3>${data.name}</h3>
-            <small>⭐ ${data.score} Points</small>
-        </div>
+    <h3>${data.roll} - ${data.name}</h3>
+    <small>⭐ ${data.score}/20 
+    Points</small>
+</div>
     </div>
 
     <div class="bar">
