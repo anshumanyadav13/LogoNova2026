@@ -66,7 +66,9 @@ localStorage.removeItem("quizCompleted");
         localStorage.setItem("name", name);
         localStorage.setItem("roll", roll);
         localStorage.setItem("class", cls);
-
+if(document.documentElement.requestFullscreen){
+    document.documentElement.requestFullscreen();
+}
         window.location.href = "rules.html";
 
     } catch (error) {
