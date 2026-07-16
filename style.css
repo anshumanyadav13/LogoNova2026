@@ -596,3 +596,16 @@ h2{
 h3{
     color:#FFD700;
 }
+
+.info h3{
+    color:white;
+    margin:0;
+    font-size:20px;
+    font-weight:700;
+}
+
+.info small{
+    color:#FFD700;
+    font-size:16px;
+    font-weight:600;
+}
