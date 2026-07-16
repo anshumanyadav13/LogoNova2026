@@ -17,7 +17,11 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-
+if (localStorage.getItem("quizCompleted") === "true") {
+    alert("You have already completed the quiz.");
+    window.location.href = "result.html";
+    return;
+}
 window.startQuiz = async function () {
 
     const name = document.getElementById("name").value.trim();
