@@ -1,168 +1,163 @@
 const questions = [
 
 {
-logo:"images/docker.png",
-question:"Identify this logo.",
-options:["Docker","Kubernetes","GitHub","Git"],
-answer:"Docker",
-points:2
-},
-
-{
-logo:"",
-question:"Which company owns WhatsApp?",
-options:["Meta","Google","Microsoft","Apple"],
-answer:"Meta",
-points:2
-},
-
-{
-    logo: "images/copilot.png",
-    question: "Identify this AI assistant logo.",
-    options: [
-        "Microsoft Copilot",
-        "Google Gemini",
-        "ChatGPT",
-        "Claude"
-    ],
-    answer: "Microsoft Copilot",
-    points: 2
-},
-
-{
-logo:"",
-question:"Which app is mainly used for video meetings?",
-options:["Zoom","Spotify","Instagram","Telegram"],
-answer:"Zoom",
-points:2
-},
-
-{
-logo:"images/amazon.png",
-question:"Identify this logo.",
-options:["Amazon","Flipkart","Myntra","eBay"],
-answer:"Amazon",
-points:2
-},
-
-{
-logo:"",
-question:"Which company developed the Android operating system?",
-options:["Google","Apple","Microsoft","Samsung"],
-answer:"Google",
-points:2
-},
-
-{
-logo:"images/perplexity.png",
-question:"Identify this logo.",
-options:["Perplexity","ChatGPT","Gemini","Claude"],
-answer:"Perplexity",
-points:2
-},
-
-{
-logo:"",
-question:"Which app is mainly used for professional networking?",
-options:["LinkedIn","Instagram","Snapchat","Pinterest"],
-answer:"LinkedIn",
-points:2
-},
-
-{
-logo:"images/github.png",
-question:"Identify this logo.",
-options:["GitHub","GitLab","Bitbucket","SourceForge"],
-answer:"GitHub",
-points:2
-},
-
-{
-logo:"",
-question:"Which company developed Windows?",
-options:["Microsoft","Google","Apple","IBM"],
+logo:"images/microsoft.png",
+question:"",
+options:["Google","Microsoft","IBM","Adobe"],
 answer:"Microsoft",
-points:2
+points:1
 },
 
 {
-logo:"images/adobe.png",
-question:"Identify this logo.",
-options:["Adobe","Autodesk","Corel","Oracle"],
-answer:"Adobe",
-points:2
-},
-
-{
-logo:"",
-question:"Which app is mainly used for cloud storage?",
-options:["Google Drive","YouTube","Netflix","Chrome"],
-answer:"Google Drive",
-points:2
-},
-
-{
-logo:"images/discord.png",
-question:"Identify this logo.",
-options:["Discord","Slack","Skype","Teams"],
-answer:"Discord",
-points:2
-},
-
-{
-logo:"",
-question:"Which company owns Instagram?",
-options:["Meta","Google","Apple","Microsoft"],
-answer:"Meta",
-points:2
+logo:"images/linkedin.png",
+question:"",
+options:["Instagram","LinkedIn","Intel","Indeed"],
+answer:"LinkedIn",
+points:1
 },
 
 {
 logo:"images/linux.png",
-question:"Identify this logo.",
-options:["Linux","Windows","Android","Ubuntu"],
+question:"",
+options:["Windows","Android","macOS","Linux"],
 answer:"Linux",
-points:2
+points:1
 },
 
 {
-logo:"",
-question:"Which app is mainly used for team communication?",
-options:["Slack","Netflix","Facebook","YouTube"],
-answer:"Slack",
-points:2
+logo:"images/chrome.png",
+question:"",
+options:["Firefox","Microsoft Edge","Safari","Google Chrome"],
+answer:"Google Chrome",
+points:1
 },
 
 {
-logo:"images/firefox.png",
-question:"Identify this logo.",
-options:["Firefox","Chrome","Edge","Opera"],
-answer:"Firefox",
-points:2
+logo:"images/googledrive.png",
+question:"",
+options:["Google Docs","Google Drive","Gmail","Google Meet"],
+answer:"Google Drive",
+points:1
 },
 
 {
-logo:"",
-question:"Which company developed the Chrome browser?",
-options:["Google","Microsoft","Mozilla","Apple"],
-answer:"Google",
-points:2
+logo:"images/metaai.png",
+question:"",
+options:["Meta AI","Gemini","ChatGPT","Claude"],
+answer:"Meta AI",
+points:1
 },
 
 {
-logo:"images/dropbox.png",
-question:"Identify this logo.",
-options:["Dropbox","OneDrive","Google Drive","iCloud"],
-answer:"Dropbox",
-points:2
+logo:"images/bluetooth.png",
+question:"",
+options:["Wi-Fi","AirDrop","Bluetooth","USB"],
+answer:"Bluetooth",
+points:1
 },
 
 {
-logo:"",
-question:"Which app is primarily used for source code hosting?",
-options:["GitHub","Instagram","Netflix","Spotify"],
-answer:"GitHub",
-points:2
+logo:"images/gmail.png",
+question:"",
+options:["Outlook","Gmail","Yahoo Mail","Proton Mail"],
+answer:"Gmail",
+points:1
+},
+
+{
+logo:"images/vscode.png",
+question:"",
+options:["VS Code","Eclipse","NetBeans","Turbo C"],
+answer:"VS Code",
+points:1
+},
+
+{
+logo:"images/snapchat.png",
+question:"",
+options:["Docker","Snapchat","Kubernetes","OpenShift"],
+answer:"Snapchat",
+points:1
+},
+
+{
+logo:"images/android.png",
+question:"",
+options:["iOS","Android","Windows","HarmonyOS"],
+answer:"Android",
+points:1
+},
+
+{
+logo:"images/fileexplorer.png",
+question:"",
+options:["File Explorer","Downloads","File Manager","Google Drive"],
+answer:"File Explorer",
+points:1
+},
+
+{
+logo:"images/googledocs.png",
+question:"",
+options:["Microsoft Word","Google Docs","LibreOffice","WPS Office"],
+answer:"Google Docs",
+points:1
+},
+
+{
+logo:"images/pinterest.png",
+question:"",
+options:["Threads","Pinterest","Twitter/X","PowerPoint"],
+answer:"Pinterest",
+points:1
+},
+
+{
+logo:"images/edge.png",
+question:"",
+options:["Chrome","Edge","Firefox","Safari"],
+answer:"Edge",
+points:1
+},
+
+{
+logo:"images/classroom.png",
+question:"",
+options:["Classroom","Pathshala","Shiksha","Meet"],
+answer:"Classroom",
+points:1
+},
+
+{
+logo:"images/pdf.png",
+question:"",
+options:["Microsoft Word","Adobe PDF","Microsoft Excel","Google Docs"],
+answer:"Adobe PDF",
+points:1
+},
+
+{
+logo:"images/twitter.png",
+question:"",
+options:["Facebook","Twitter/X","LinkedIn","Pinterest"],
+answer:"Twitter/X",
+points:1
+},
+
+{
+logo:"images/chatgpt.png",
+question:"",
+options:["OneDrive","Chrome","ChatGPT","Claude"],
+answer:"ChatGPT",
+points:1
+},
+
+{
+logo:"images/usb.png",
+question:"",
+options:["USB Cable","FireWire","HDMI","Ethernet"],
+answer:"USB Cable",
+points:1
 }
 
 ];
