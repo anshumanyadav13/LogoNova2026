@@ -50,7 +50,7 @@ if (snapshot.empty) {
         else if(rank==3) medal="🥉";
 
         let initial = data.name.charAt(0).toUpperCase();
-        let percent = (data.score / 40) * 100;
+        let percent = (data.score / 20) * 100;
 
         leaderboard.innerHTML += `
 <div class="leader-card">
