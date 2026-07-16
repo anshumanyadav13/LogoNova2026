@@ -141,11 +141,20 @@ function resetButtons(){
 
 async function nextQuestion(){
 
+    clearInterval(timer);
+
+    optionButtons.forEach(btn=>{
+        btn.blur();
+        btn.disabled = false;
+    });
+
     currentQuestion++;
 
     if(currentQuestion < questions.length){
 
-        loadQuestion();
+        setTimeout(()=>{
+            loadQuestion();
+        },50);
 
     }else{
 
@@ -153,7 +162,7 @@ async function nextQuestion(){
 
         await saveScore(score);
 
-        document.body.innerHTML = `
+        document.body.innerHTML=`
         <div class="container">
             <div class="card">
                 <h1>🎉 Quiz Submitted Successfully!</h1>
@@ -162,12 +171,10 @@ async function nextQuestion(){
         </div>
         `;
 
-        setTimeout(function(){
-            window.location.href = "leaderboard.html";
+        setTimeout(()=>{
+            window.location.href="leaderboard.html";
         },2000);
-
     }
-
 }
 
 loadQuestion();
