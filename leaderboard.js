@@ -75,11 +75,7 @@ board.innerHTML += `
 </div>
 `;
 
-    if (d.classroom === "Room No.37") {
-      room.innerHTML += html;
-    } else if (d.classroom === "Lab") {
-      lab.innerHTML += html;
-    }
+    
   });
 }
 
