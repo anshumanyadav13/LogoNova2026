@@ -30,11 +30,11 @@ async function loadWinners() {
     snapshot.forEach(doc => {
         const data = doc.data();
 
-        if (data.classroom === "Class A") {
-            classA.push(data);
-        } else if (data.classroom === "Class B") {
-            classB.push(data);
-        }
+        if (data.classroom === "Room No. 37") {
+    classA.push(data);
+} else if (data.classroom === "Lab") {
+    classB.push(data);
+}
     });
 
     classA.sort((a, b) => b.score - a.score);
@@ -43,7 +43,7 @@ async function loadWinners() {
     if (classA.length > 0) {
         winnerA.innerHTML = `
         <div class="leader-card">
-            <h2>🥇 Winner - Class A</h2>
+            <h2>🥇 Winner - Room No. 37</h2>
             <h3>${classA[0].roll} - ${classA[0].name}</h3>
             <p>Score: ${classA[0].score}/20</p>
         </div>`;
@@ -52,7 +52,7 @@ async function loadWinners() {
     if (classB.length > 0) {
         winnerB.innerHTML = `
         <div class="leader-card">
-            <h2>🥇 Winner - Class B</h2>
+            <h2>🥇 Winner - Lab</h2>
             <h3>${classB[0].roll} - ${classB[0].name}</h3>
             <p>Score: ${classB[0].score}/20</p>
         </div>`;
