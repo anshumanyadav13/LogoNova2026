@@ -36,6 +36,11 @@ function loadLeaderboard(classroom, elementId) {
 const filtered = snapshot.docs.filter(doc =>
     doc.data().classroom === classroom
 );
+console.log(
+    "Room:", classroom,
+    "Filtered:", filtered.length,
+    snapshot.docs.map(d => d.data())
+);
         if (filtered.length === 0) {
             board.innerHTML = "<p style='color:white;text-align:center;'>No participants yet.</p>";
             return;
