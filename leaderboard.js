@@ -58,13 +58,11 @@ if (classroom === "roomno37") {
                       rank === 3 ? "🥉" : rank;
 
         board.innerHTML += `
-<p style="color:white;font-size:20px">
-board.innerHTML += `
 <p style="color:white;font-size:20px;margin:10px 0;">
     <span style="display:inline-block;width:35px;text-align:center;">${medal}</span>
     <span>${d.roll} - ${d.name} (${d.score})</span>
-</p>`;
-</p>`;
+</p>
+`;
     });
 }
 
