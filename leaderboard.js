@@ -42,16 +42,19 @@ alert("Classroom = " + JSON.stringify(d.classroom));
 
         let board, rank;
 
-        const classroom = String(d.classroom || "").trim().toLowerCase();
+        const classroom = String(d.classroom || "")
+    .toLowerCase()
+    .replace(/\s+/g, "")   // remove all spaces
+    .replace(/\./g, "");   // remove dots
 
-if (classroom.includes("room")) {
+if (classroom === "roomno37") {
     board = room;
     rank = roomRank++;
-} else if (classroom.includes("lab")) {
+} else if (classroom === "lab") {
     board = lab;
     rank = labRank++;
 } else {
-    return;
+    continue;
 }
 
         const medal = rank === 1 ? "🥇" :
