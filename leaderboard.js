@@ -36,49 +36,50 @@ const docs = snap.docs.sort((a, b) => b.data().score - a.data().score);
     const d = doc.data();
 
     let board;
-let rank;
+    let rank;
 
-if (d.classroom === "Room No.37") {
-    board = room;
-    rank = room.children.length + 1;
-} else if (d.classroom === "Lab") {
-    board = lab;
-    rank = lab.children.length + 1;
-} else {
-    return;
-}
+    // Normalize classroom value
+    const classroom = (d.classroom || "")
+        .toLowerCase()
+        .replace(/\s/g, "")
+        .replace(/\./g, "");
 
-let medal = rank;
-if (rank == 1) medal = "🥇";
-else if (rank == 2) medal = "🥈";
-else if (rank == 3) medal = "🥉";
+    if (classroom === "roomno37") {
+        board = room;
+        rank = room.children.length + 1;
+    } else if (classroom === "lab") {
+        board = lab;
+        rank = lab.children.length + 1;
+    } else {
+        return;
+    }
 
-let percent = (d.score / 20) * 100;
-let initial = d.name.charAt(0).toUpperCase();
+    let medal = rank;
+    if (rank === 1) medal = "🥇";
+    else if (rank === 2) medal = "🥈";
+    else if (rank === 3) medal = "🥉";
 
-board.innerHTML += `
-<div class="leader-card">
-    <div class="leader-top">
-        <span class="medal">${medal}</span>
+    let percent = (d.score / 20) * 100;
+    let initial = d.name.charAt(0).toUpperCase();
 
-        <div class="avatar">
-            ${initial}
+    board.innerHTML += `
+    <div class="leader-card">
+        <div class="leader-top">
+            <span class="medal">${medal}</span>
+
+            <div class="avatar">${initial}</div>
+
+            <div class="info">
+                <h3>${d.roll} - ${d.name}</h3>
+                <small>⭐ ${d.score}/20 Points</small>
+            </div>
         </div>
 
-        <div class="info">
-            <h3>${d.roll} - ${d.name}</h3>
-            <small>⭐ ${d.score}/20 Points</small>
+        <div class="bar">
+            <div class="fill" style="width:${percent}%"></div>
         </div>
-    </div>
-
-    <div class="bar">
-        <div class="fill" style="width:${percent}%"></div>
-    </div>
-</div>
-`;
-
-    
-  });
+    </div>`;
+});
 }
 
 load();
