@@ -3,6 +3,7 @@ import {
     getFirestore,
     collection,
     query,
+    where,
     orderBy,
     onSnapshot
 } from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
@@ -19,61 +20,68 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-const leaderboard = document.getElementById("leaderboard");
+function loadLeaderboard(classroom, elementId) {
 
- const q = query(
-    collection(db, "scores"),
-    orderBy("score", "desc"),
-);
+    const board = document.getElementById(elementId);
 
-onSnapshot(q, (snapshot) => {
+    const q = query(
+        collection(db, "scores"),
+        where("classroom", "==", classroom),
+        orderBy("score", "desc")
+    );
 
-    leaderboard.innerHTML = "";
+    onSnapshot(q, (snapshot) => {
 
-if (snapshot.empty) {
-    leaderboard.innerHTML = `
-        <h2 style="color:white;text-align:center;">
-            Waiting for the first participant...
-        </h2>
-    `;
-    return;
-}
+        board.innerHTML = "";
 
-    let rank = 1;
+        if (snapshot.empty) {
+            board.innerHTML = "<p style='color:white;text-align:center;'>No participants yet.</p>";
+            return;
+        }
 
-    snapshot.forEach((doc) => {
-        const data = doc.data();
+        let rank = 1;
 
-        let medal = rank;
-        if(rank==1) medal="🥇";
-        else if(rank==2) medal="🥈";
-        else if(rank==3) medal="🥉";
+        snapshot.forEach((doc) => {
 
-        let initial = data.name.charAt(0).toUpperCase();
-        let percent = (data.score / 20) * 100;
+            const data = doc.data();
 
-        leaderboard.innerHTML += `
-<div class="leader-card">
-    <div class="leader-top">
-        <span class="medal">${medal}</span>
+            let medal = rank;
+            if (rank == 1) medal = "🥇";
+            else if (rank == 2) medal = "🥈";
+            else if (rank == 3) medal = "🥉";
 
-        <div class="avatar avatar${rank}">
-            ${initial}
-        </div>
+            let initial = data.name.charAt(0).toUpperCase();
+            let percent = (data.score / 20) * 100;
 
-        <div class="info">
-    <h3>${data.roll} - ${data.name}</h3>
-    <small>⭐ ${data.score}/20 
-    Points</small>
-</div>
-    </div>
+            board.innerHTML += `
+            <div class="leader-card">
+                <div class="leader-top">
 
-    <div class="bar">
-        <div class="fill" style="width:${percent}%"></div>
-    </div>
-</div>
-`;
-        rank++;
+                    <span class="medal">${medal}</span>
+
+                    <div class="avatar avatar${rank}">
+                        ${initial}
+                    </div>
+
+                    <div class="info">
+                        <h3>${data.roll} - ${data.name}</h3>
+                        <small>⭐ ${data.score}/20 Points</small>
+                    </div>
+
+                </div>
+
+                <div class="bar">
+                    <div class="fill" style="width:${percent}%"></div>
+                </div>
+            </div>
+            `;
+
+            rank++;
+        });
+
     });
 
-});
+}
+
+loadLeaderboard("Room No. 37", "leaderboard37");
+loadLeaderboard("Lab", "leaderboardLab");
