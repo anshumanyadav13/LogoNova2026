@@ -76,12 +76,12 @@ function loadLeaderboard(classroom, elementId) {
             </div>
             `;
 
-            rank++;
+            rank++; 
         });
 
     });
 
 }
 
-loadLeaderboard("Room No. 37", "leaderboard37");
+loadLeaderboard("Room No.37", "leaderboard37");
 loadLeaderboard("Lab", "leaderboardLab");
