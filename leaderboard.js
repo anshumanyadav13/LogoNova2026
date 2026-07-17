@@ -59,16 +59,9 @@ if (classroom.includes("room")) {
                       rank === 3 ? "🥉" : rank;
 
         board.innerHTML += `
-        <div class="leader-card">
-            <div class="leader-top">
-                <span class="medal">${medal}</span>
-                <div class="avatar">${d.name.charAt(0).toUpperCase()}</div>
-                <div class="info">
-                    <h3>${d.roll} - ${d.name}</h3>
-                    <small>⭐ ${d.score}/20 Points</small>
-                </div>
-            </div>
-        </div>`;
+<p style="color:white;font-size:20px">
+${medal} ${d.roll} - ${d.name} (${d.score})
+</p>`;
     });
 }
 
